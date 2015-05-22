@@ -3,7 +3,7 @@
 # rapidtor.py - timedelay id changer in Tor network
 # Federico Fazzi <eurialo@deftcode.ninja>
 #
-# (c) 2015 - MIT License.
+# (c) 2014 - MIT License.
 #
 
 import os, sys
