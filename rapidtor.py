@@ -1,34 +1,10 @@
 #!/usr/bin/python
 #
-# Copyright (C) 2012-2015 Federico Fazzi - http://deftcode.ninja
 # rapidtor.py - timedelay id changer in Tor network
+# Federico Fazzi <eurialo@deftcode.ninja>
 #
-# First generate hashed control password:
-# deftcode ~ $ tor --quiet --hash-password torpasswd
-# 16:C9B4152185E88628607DE42FA83F01801BD332C8D91ACC6B29CC863F4A
-# 
-# Edit ~/.torrc configuration file and uncomment these lines
-# then change the HashedControlPassword with previously generated:
-# --
-# RunAsDaemon 1
-# ControlPort 9051
-# HashedControlPassword 16:C9B4152185E88628607DE42FA83F01801BD332C8D91ACC6B29CC863F4A
-# --
+# (c) 2015 - MIT License.
 #
-# Force tor daemon to use your custom configuration file:
-# deftcode ~ $ tor --quiet -f ~/.torrc
-# Mar 07 09:46:12.543 [notice] Tor v0.2.4.20 (git-0d50b03673670de6).
-# Mar 07 09:46:12.543 [notice] Read configuration file "/home/eurialo/.torrc".
-# Mar 07 09:46:12.550 [notice] Opening Socks listener on 127.0.0.1:9050
-# Mar 07 09:46:12.550 [notice] Opening Control listener on 127.0.0.1:9051
-# Mar 07 09:46:12.550 [notice] Opening OR listener on 0.0.0.0:9001
-#
-# deftcode ~ $ python rapidtor.py
-# Authentication....OK!
-# >> Changed identity in 5 second/s..OK!
-# >> Changed identity in 5 second/s..OK!
-# >> Changed identity in 5 second/s..OK!
-# ..
 
 import os, sys
 import socket, signal, time
